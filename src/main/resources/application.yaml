@@ -33,13 +33,12 @@ spring:
 logging:
   config: classpath:logback-spring-${spring.profiles.active}.xml
 sites:
-  auth-url: http://localhost:8080
-  smart-admin-url: http://localhost:8081
-  smart-admin-lrc-url: http://localhost:8082
-  smart-admin-cpc-url: http://localhost:8083
-  lrc-app-url: http://localhost:8084
-  cpc-app-url: http://localhost:8085
+  smart-admin-gateway-url: http://localhost:7071
   lrc-token-ignore: /api/v1/lrc/captcha/siteverify,/api/v1/lrc/scam/mail,/api/v1/lrc/user/join,/api/v1/lrc/user/join/certification,/api/v1/lrc/user/password/reset,/api/v1/lrc/user/password/reset/email
+allow-hosts:
+  mng:
+    - http://localhost
+    - https://smartadmin.bithumbsystems.com
 ---
 spring:
   config:
@@ -49,13 +48,12 @@ spring:
 logging:
   config: classpath:logback-spring-${spring.profiles.active}.xml
 sites:
-  auth-url: http://k8s-systemsd-systemsa-b1008c664c-a3ca74a448432ee0.elb.ap-northeast-2.amazonaws.com
-  smart-admin-url: http://k8s-systemsd-systemsm-3411cecba4-a185780c02b3ce0f.elb.ap-northeast-2.amazonaws.com
-  smart-admin-lrc-url: http://k8s-systemsd-lrcmngap-6f8cba9e8e-5345f9a61df958fe.elb.ap-northeast-2.amazonaws.com
-  smart-admin-cpc-url: http://k8s-systemsd-cpcmngap-b5f81d5545-2ecde87097b8d7bf.elb.ap-northeast-2.amazonaws.com
-  lrc-app-url: http://k8s-systemsd-lrcappap-51a49fed08-97638021b6a67650.elb.ap-northeast-2.amazonaws.com
-  cpc-app-url: http://k8s-systemsd-cpcappap-0fd4253b97-c2bdae0b9ed776ca.elb.ap-northeast-2.amazonaws.com
+  smart-admin-gateway-url: http://k8s-systemsd-systemsg-d8965d6033-f02444dccaaaabac.elb.ap-northeast-2.amazonaws.com
   lrc-token-ignore: /api/v1/lrc/captcha/siteverify,/api/v1/lrc/scam/mail,/api/v1/lrc/user/join,/api/v1/lrc/user/join/certification,/api/v1/lrc/user/password/reset,/api/v1/lrc/user/password/reset/email
+allow-hosts:
+  mng:
+    - http://localhost
+    - https://smartadmin.bithumbsystems.com
 ---
 spring:
   config:
@@ -65,13 +63,11 @@ spring:
 logging:
   config: classpath:logback-spring-${spring.profiles.active}.xml
 sites:
-  auth-url: http://bs-dev-sadmin-auth-api-intnlb-c300cbc61c2d8c1d.elb.ap-northeast-2.amazonaws.com
-  smart-admin-url: http://bs-dev-sadmin-mng-api-intnlb-b056ca7212253ec4.elb.ap-northeast-2.amazonaws.com
-  smart-admin-lrc-url: http://bs-dev-lrc-mng-api-intnlb-2946b43f0595d295.elb.ap-northeast-2.amazonaws.com
-  smart-admin-cpc-url: http://bs-dev-cpc-mng-api-intnlb-35421a7834815ba8.elb.ap-northeast-2.amazonaws.com
-  lrc-app-url: http://bs-dev-lrc-app-api-intnlb-22b0aada38b8e44f.elb.ap-northeast-2.amazonaws.com
-  cpc-app-url: http://bs-dev-cpc-app-api-intnlb-0e432ee06a0e5273.elb.ap-northeast-2.amazonaws.com
+  smart-admin-gateway-url: https://smartadmin-gateway-api.dev.bithumb.com
   lrc-token-ignore: /api/v1/lrc/captcha/siteverify,/api/v1/lrc/scam/mail,/api/v1/lrc/user/join,/api/v1/lrc/user/join/certification,/api/v1/lrc/user/password/reset,/api/v1/lrc/user/password/reset/email
+allow-hosts:
+  mng:
+    - https://smartadmin.dev.bithumb.com
 ---
 spring:
   config:
@@ -81,13 +77,11 @@ spring:
 logging:
   config: classpath:logback-spring-${spring.profiles.active}.xml
 sites:
-  auth-url: http://bs-qa-sadmin-auth-api-intnlb-c990ec0a5ab8fa84.elb.ap-northeast-2.amazonaws.com
-  smart-admin-url: http://bs-qa-sadmin-mng-api-intnlb-38dd38162ef2d7e3.elb.ap-northeast-2.amazonaws.com
-  smart-admin-lrc-url: http://bs-qa-lrc-mng-api-intnlb-218b4d31d3fe6225.elb.ap-northeast-2.amazonaws.com
-  smart-admin-cpc-url: http://bs-qa-cpc-mng-api-intnlb-e7286b5ad5e10d14.elb.ap-northeast-2.amazonaws.com
-  lrc-app-url: http://bs-qa-lrc-app-api-intnlb-5f2e6b73955e1314.elb.ap-northeast-2.amazonaws.com
-  cpc-app-url: http://bs-qa-cpc-app-api-intnlb-77c5d2580a3aa06e.elb.ap-northeast-2.amazonaws.com
+  smart-admin-gateway-url: https://smartadmin-gateway-api.qa.bithumb.com
   lrc-token-ignore: /api/v1/lrc/captcha/siteverify,/api/v1/lrc/scam/mail,/api/v1/lrc/user/join,/api/v1/lrc/user/join/certification,/api/v1/lrc/user/password/reset,/api/v1/lrc/user/password/reset/email
+allow-hosts:
+  mng:
+    - https://smartadmin.qa.bithumb.com
 ---
 spring:
   config:
@@ -97,13 +91,11 @@ spring:
 logging:
   config: classpath:logback-spring-${spring.profiles.active}.xml
 sites:
-  auth-url: http://bs-sadmin-auth-api-intnlb-bc558335f7e6e591.elb.ap-northeast-2.amazonaws.com
-  smart-admin-url: http://bs-sadmin-mng-api-intnlb-81638ad950a3faac.elb.ap-northeast-2.amazonaws.com
-  smart-admin-lrc-url: http://bs-lrc-mng-api-intnlb-de47854c0c46cc98.elb.ap-northeast-2.amazonaws.com
-  smart-admin-cpc-url: http://bs-cpc-mng-api-intnlb-a7b27e9ac37c95fd.elb.ap-northeast-2.amazonaws.com
-  lrc-app-url: http://bs-lrc-app-api-intnlb-1f9ef12d58cd84a1.elb.ap-northeast-2.amazonaws.com
-  cpc-app-url: http://bs-cpc-app-api-intnlb-35e666af71367f3f.elb.ap-northeast-2.amazonaws.com
+  smart-admin-gateway-url: https://smartadmin-gateway-api.bithumb.com
   lrc-token-ignore: /api/v1/lrc/captcha/siteverify,/api/v1/lrc/scam/mail,/api/v1/lrc/user/join,/api/v1/lrc/user/join/certification,/api/v1/lrc/user/password/reset,/api/v1/lrc/user/password/reset/email
+allow-hosts:
+  mng:
+    - https://smartadmin.bithumb.com
 ---
 # Spring cloud gateway setup
 #spring:

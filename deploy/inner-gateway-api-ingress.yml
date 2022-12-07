@@ -2,7 +2,7 @@ apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   namespace: systems-dev-ns
-  name: systems-gateway-api-ingress
+  name: inner-gateway-api-ingress
   annotations:
     kubernetes.io/ingress.class: alb
     alb.ingress.kubernetes.io/scheme: internet-facing
@@ -19,6 +19,6 @@ spec:
             pathType: Prefix
             backend:
               service:
-                name: systems-gateway-api-nlb
+                name: inner-gateway-api-nlb
                 port:
                   number: 80

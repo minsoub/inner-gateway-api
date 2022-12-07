@@ -1,23 +1,23 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: systems-gateway-api
+  name: inner-gateway-api
   namespace: NAMESPACE
   labels:
-    app: systems-gateway-api
+    app: inner-gateway-api
 spec:
   replicas: 2
   selector:
     matchLabels:
-      app: systems-gateway-api
+      app: inner-gateway-api
   strategy: {}
   template:
     metadata:
       labels:
-        app: systems-gateway-api
+        app: inner-gateway-api
     spec:
       containers:
-        - name: systems-gateway-api
+        - name: inner-gateway-api
           image: AWS_ECR_URI
           ports:
             - containerPort: 7070

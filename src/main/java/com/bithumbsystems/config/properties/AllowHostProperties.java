@@ -5,11 +5,12 @@ import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.boot.context.properties.ConfigurationPropertiesScan;
 import org.springframework.stereotype.Component;
 
+import java.util.List;
+
 @Data
 @Component
-@ConfigurationProperties(prefix = "sites")
+@ConfigurationProperties(prefix = "allow-hosts")
 @ConfigurationPropertiesScan
-public class UrlProperties {
-    private String smartAdminGatewayUrl;
-    private String lrcTokenIgnore;
+public class AllowHostProperties {
+    public final List<String> mng;
 }

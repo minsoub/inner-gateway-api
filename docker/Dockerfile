@@ -9,7 +9,7 @@ ARG PROFILES
 ENV SET_PROFILE="$PROFILES"
 RUN mkdir /app
 WORKDIR /app
-COPY ${JAR_FILE} systems-gateway-api.jar
+COPY ${JAR_FILE} inner-gateway-api.jar
 COPY deploy/entrypoint.sh entrypoint.sh
 RUN chmod 755 entrypoint.sh
 RUN mkdir /app/logs

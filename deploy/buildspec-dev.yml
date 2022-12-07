@@ -3,9 +3,9 @@ version: 0.2
 env:
   variables:
     SPRING_PROFILE: "dev"
-    REPO_URI: "807380035085.dkr.ecr.ap-northeast-2.amazonaws.com/systems-gateway-api-dev-repo"
-    CONTAINER_NAME: "systems-gateway-api-dev-container"
-    JAR_FILE_NAME: "./build/libs/systems-gateway-api-0.0.1-SNAPSHOT.jar"
+    REPO_URI: "807380035085.dkr.ecr.ap-northeast-2.amazonaws.com/inner-gateway-api-dev-repo"
+    CONTAINER_NAME: "inner-gateway-api-dev-container"
+    JAR_FILE_NAME: "./build/libs/inner-gateway-api-0.0.1-SNAPSHOT.jar"
     SERVICE_ROLE: "arn:aws:iam::807380035085:role/service-role/codebuild-systems-gateway-api-codebuild-dev-service-role"
 phases:
   install:

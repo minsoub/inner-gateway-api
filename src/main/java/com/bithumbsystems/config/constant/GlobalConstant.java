@@ -14,4 +14,6 @@ public final class GlobalConstant {
     public static final String LRC_SITE_ID = "62a15f4ae4129b518b133127";
     public static final String CPC_SITE_ID = "62a15f4ae4129b518b133128";
     public static final String MNG_SITE_ID = "62a15f4ae4129b518b133129";
+
+    public static final String CMS_SITE_ID = "SITE_aa776861f48e455281dd2abd373dd258";
 }
