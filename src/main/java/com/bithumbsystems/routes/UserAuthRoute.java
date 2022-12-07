@@ -29,8 +29,7 @@ public class UserAuthRoute {
         return builder.routes()
                 .route("adm-service",   // 운영자 로그인 처리
                         route -> route.path("/adm/**")
-                                .filters(filter -> filter.rewritePath("/adm/(?<path>.*)", "/api/v1/adm/${path}")
-                                        .filter(userFilter.apply(new Config("UserFilter apply", allowHostProperties,  true, true))))
+                                .filters(filter -> filter.filter(userFilter.apply(new Config("UserFilter apply", allowHostProperties,  true, true))))
                                 .uri(urlProperties.getSmartAdminGatewayUrl())
                 )
                 .route("api-service-mng-lrc",   // API 서비스 호출 (LRC Smart Admin)
