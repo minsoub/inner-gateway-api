@@ -14,4 +14,4 @@ export AWS_SECRET_ACCESS_KEY=$3
 echo $AWS_ACCESS_KEY_ID
 echo $AWS_SECRET_ACCESS_KEY
 
-java -Dspring.profiles.active=$1 -Dreactor.netty.pool.leasingStrategy=lifo -jar ./systems-gateway-api.jar
+java -Dspring.profiles.active=$1 -Dreactor.netty.pool.leasingStrategy=lifo -jar ./inner-gateway-api.jar

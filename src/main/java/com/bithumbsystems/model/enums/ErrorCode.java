@@ -15,8 +15,11 @@ public enum ErrorCode {
     EXPIRED_TOKEN(909, "Token expired"),
     SERVER_RESPONSE_ERROR(904, "API 서버에서 에러가 발생하였습니다!!!"),
     GATEWAY_SERVER_ERROR(905, "Gateway Server Error"),
+    USER_ALREADY_LOGIN(906, "User is already login"),
+    INVALID_DOMAIN(910, "Invalid Domain Name"),
+    INVALID_ORIGIN_DOMAIN(911, "Invalid Origin Name"),
 
-    USER_ALREADY_LOGIN(906, "User is already login");
+    INVALID_URI_PATH(912, "Invalid URI Path");
 
     private final int code;
     private final String message;
