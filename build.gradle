@@ -50,9 +50,6 @@ dependencies {
     implementation 'com.amazonaws:aws-encryption-sdk-java:2.4.0'
     implementation 'com.amazonaws:aws-java-sdk-kms'
     implementation 'commons-io:commons-io:2.11.0'
-    implementation 'io.awspring.cloud:spring-cloud-starter-aws:2.4.1'
-    implementation 'io.awspring.cloud:spring-cloud-starter-aws-messaging:2.4.1'
-    implementation 'io.awspring.cloud:spring-cloud-starter-aws-parameter-store-config:2.4.1'
     implementation 'org.springframework.cloud:spring-cloud-starter-gateway'
     implementation('com.google.code.gson:gson:2.9.0')
 
